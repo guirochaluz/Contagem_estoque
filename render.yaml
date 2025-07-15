@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: producao-streamlit
+    name: producao-painel
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
