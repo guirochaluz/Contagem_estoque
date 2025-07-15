@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: producao-streamlit
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=10000 --server.address=0.0.0.0
+    envVars:
+      - key: DB_URL
+        value: postgresql://admin:pR6aFnyZm6nc1wlCheGVXvjJ5VZrLZQ6@dpg-d0d26gjuibrs73dra1tg-a.oregon-postgres.render.com/contazoom?sslmode=require
